@@ -1,1 +1,4 @@
-<p>animated-component works!</p>
+@if(isVisible){
+  <div @fadeIn class="content">This content will fade in</div>
+}
+<button (click)="toggle()">Toggle Animation</button>
