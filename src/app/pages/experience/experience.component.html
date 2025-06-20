@@ -1,72 +1,77 @@
-<section class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">
-      <span class="border-b-4 border-blue-500 pb-2">Professional Experience</span>
+<section
+  class="w-full flex justify-center p-16 m-16 section px-6 sm:px-8 lg:px-16 bg-gradient-to-br from-white to-blue-50"
+  data-aos="fade-up"
+>
+  <div class="container w-full mx-auto">
+    <h2
+      class="text-4xl font-extrabold text-center text-gray-800 mb-12"
+      data-aos="fade-down"
+    >
+      <span class="relative inline-block pb-2">
+        <span
+          class="absolute bottom-0 left-0 w-full h-1 bg-blue-500 rounded-full"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        ></span>
+        <span class="relative">Professional Experience</span>
+      </span>
     </h2>
-    
-    <!-- Experience Item -->
-    <div class="mb-12 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+
+    <!-- Experience Card -->
+    <div
+      class="group backdrop-blur-xl transition-transform transform"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
       <div class="flex flex-col sm:flex-row justify-between mb-4">
-        <h3 class="text-2xl font-bold text-gray-800">
+        <h3 class="text-2xl font-semibold text-gray-800">
           Full Stack Developer
           <span class="text-blue-600">{{'@'}} Softcafe IT Solution</span>
         </h3>
-        <span class="text-gray-600 font-medium mt-2 sm:mt-0">Feb 2023 – Present</span>
+        <span class="text-gray-500 font-medium mt-2 sm:mt-0"
+          >Feb 2023 – Present</span
+        >
       </div>
-      
-      <div class="mb-4">
-        <span class="inline-block bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full mr-2">
-          Angular 11
-        </span>
-        <span class="inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full mr-2">
-          Java 8+
-        </span>
-        <span class="inline-block bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full">
-          Spring Boot
-        </span>
+
+      <div class="flex flex-wrap gap-2 mb-6" data-aos="zoom-in-up">
+        <span class="badge-tech bg-blue-100 text-blue-700">Angular 11</span>
+        <span class="badge-tech bg-green-100 text-green-700">Java 8+</span>
+        <span class="badge-tech bg-purple-100 text-purple-700"
+          >Spring Boot</span
+        >
       </div>
-      
-      <h4 class="text-lg font-semibold text-gray-700 mb-2">Key Projects:</h4>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
-        <li class="flex items-start">
-          <svg class="h-5 w-5 text-blue-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span class="text-gray-700">UMS (Dhaka Bank)</span>
+
+      <h4
+        class="text-lg font-semibold text-gray-700 mb-2"
+        data-aos="fade-right"
+        data-aos-delay="100"
+      >
+        Key Projects:
+      </h4>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <li
+          class="flex items-center gap-2 text-gray-700"
+          data-aos="fade-left"
+          data-aos-delay="100"
+        >
+          <span class="icon-check text-blue-500"></span> UMS (Dhaka Bank)
         </li>
-        <li class="flex items-start">
-          <svg class="h-5 w-5 text-blue-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span class="text-gray-700">Account Statement</span>
+        <li class="flex items-center gap-2 text-gray-700" data-aos="fade-left" data-aos-delay="150">
+          <span class="icon-check text-blue-500"></span> Account Statement
         </li>
-        <li class="flex items-start">
-          <svg class="h-5 w-5 text-blue-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span class="text-gray-700">DPS Portal</span>
+        <li class="flex items-center gap-2 text-gray-700" data-aos="fade-left" data-aos-delay="200">
+          <span class="icon-check text-blue-500"></span> DPS Portal
         </li>
-        <li class="flex items-start">
-          <svg class="h-5 w-5 text-blue-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span class="text-gray-700">Vehicle Project (Army)</span>
+        <li class="flex items-center gap-2 text-gray-700" data-aos="fade-left" data-aos-delay="250">
+          <span class="icon-check text-blue-500"></span> Vehicle Project (Army)
         </li>
-        <li class="flex items-start">
-          <svg class="h-5 w-5 text-blue-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span class="text-gray-700">E-signature (PBL)</span>
+        <li class="flex items-center gap-2 text-gray-700" data-aos="fade-left" data-aos-delay="300">
+          <span class="icon-check text-blue-500"></span> E-signature (PBL)
         </li>
-        <li class="flex items-start">
-          <svg class="h-5 w-5 text-blue-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span class="text-gray-700">Pran Dairies</span>
+        <li class="flex items-center gap-2 text-gray-700" data-aos="fade-left" data-aos-delay="350">
+          <span class="icon-check text-blue-500"></span> Pran Dairies
         </li>
       </ul>
     </div>
-    
-    <!-- Add more experience items as needed -->
   </div>
 </section>
