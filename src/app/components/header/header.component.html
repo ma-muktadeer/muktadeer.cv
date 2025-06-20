@@ -1,12 +1,24 @@
+<header>
+  <nav>
+    <a routerLink="/" class="logo">M.A. Muktadeer</a>
+    <div class="links">
+      <a routerLink="/">Home</a>
+      <a routerLink="/about">About</a>
+    </div>
+  </nav>
+</header>
 <header class="header">
   <nav class="navbar">
     <div class="container">
-      <a href="#" class="logo">M.A.Muktadeer</a>
+      <a routerLink="/" class="logo">M.A.Muktadeer</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/skills">Skills</a></li>
+        <li><a routerLink="/projects">Projects</a></li>
+        <li><a routerLink="/experience">Exparience</a></li>
+        <li><a routerLink="/education">Education</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
       </ul>
       <div class="hamburger" (click)="toggleMenu()">
         <div class="line"></div>
@@ -32,3 +44,4 @@
     </div>
   </div>
 </header>
+
