@@ -1,1 +1,18 @@
-<p>skills works!</p>
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      @for (skill of skills; track $index) {
+        <div class="skill-item">
+          <div class="skill-header">
+            <i [class]="skill.icon"></i>
+            <span>{{ skill.name }}</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-level" [style.width.%]="skill.level"></div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
