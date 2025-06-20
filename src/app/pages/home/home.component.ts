@@ -5,6 +5,7 @@ import { ProjectsComponent } from "../projects/projects.component";
 import { ContactComponent } from "../contact/contact.component";
 import { ExperienceComponent } from "../experience/experience.component";
 import { EducationComponent } from "../education/education.component";
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -13,5 +14,13 @@ import { EducationComponent } from "../education/education.component";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+  constructor(private title: Title, private meta: Meta) {
+    this.title.setTitle('M A Muktadeer - Full Stack Developer');
+    this.meta.updateTag({
+      name: 'description',
+      content: 'Experienced Angular & Spring Boot Developer – CV of M A Muktadeer',
+    });
+  }
 
 }
