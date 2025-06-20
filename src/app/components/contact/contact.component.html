@@ -1,1 +1,104 @@
-<p>contact works!</p>
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>{{ "bandhon1995@gmail.com" }}</p>
+            <p>{{ "muktadeer.ru@gmail.com" }}</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h3>Phone</h3>
+            <p>+8801521473368</p>
+            <p>+8801763070997</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Location</h3>
+            <p>Ms Villa, Plot-S&T, Road-17, Avenue -5</p>
+            <p>Mirpur, Pallabi, Dhaka, Bangladesh</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/muktade" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.facebook.com/bandhon.apm.ru" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="mailto:bandhon1995@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a href="tel:+8801521473368"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+        class="contact-form"
+      >
+        <div class="form-group">
+          <input
+            type="text"
+            formControlName="name"
+            placeholder="Your Name"
+            required
+          />
+          @if(contactForm.get('name')?.invalid &&
+          contactForm.get('name')?.touched){
+          <div class="error-message">Name is required</div>
+          }
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Your Email"
+            required
+          />
+          @if (contactForm.get('email')?.invalid &&
+          contactForm.get('email')?.touched) {
+          <div class="error-message">Valid email is required</div>
+
+          }
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            formControlName="subject"
+            placeholder="Subject"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <textarea
+            formControlName="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          @if(contactForm.get('message')?.invalid &&
+          contactForm.get('message')?.touched){
+          <div class="error-message">Message is required</div>
+          }
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="contactForm.invalid"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
