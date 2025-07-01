@@ -27,6 +27,7 @@ export class AppComponent {
   //     });
   //   }
   // }
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {
