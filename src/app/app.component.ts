@@ -30,13 +30,14 @@ export class AppComponent {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
-  async ngOnInit() {
+    ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      const AOS = await import('aos');
-      AOS.init({
-        duration: 1000,
-        once: false,
-        offset: 80,
+      import('aos').then(AOS => {
+        AOS.init({
+          duration: 1000,
+          once: false,
+          offset: 80,
+        });
       });
     }
   }
