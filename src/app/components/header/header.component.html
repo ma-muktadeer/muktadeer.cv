@@ -11,14 +11,14 @@
   <nav class="navbar">
     <div class="container">
       <a routerLink="/" class="logo">M.A.Muktadeer</a>
-      <ul class="nav-links">
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/skills">Skills</a></li>
-        <li><a routerLink="/projects">Projects</a></li>
-        <li><a routerLink="/experience">Exparience</a></li>
-        <li><a routerLink="/education">Education</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
+      <ul class="nav-links" [ngClass]="{'active':isMenuOpen}">
+        <li (click)="toggleMenu('link')"><a routerLink="/" routerLinkActive ="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li (click)="toggleMenu('link')"><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li (click)="toggleMenu('link')"><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
+        <li (click)="toggleMenu('link')"><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+        <li (click)="toggleMenu('link')"><a routerLink="/experience" routerLinkActive="active">Experience</a></li>
+        <li (click)="toggleMenu('link')"><a routerLink="/education" routerLinkActive="active">Education</a></li>
+        <li (click)="toggleMenu('link')"><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
       </ul>
       <div class="hamburger" (click)="toggleMenu()">
         <div class="line"></div>
@@ -37,11 +37,8 @@
       </p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-primary">Hire Me</a>
-        <a href="#" class="btn btn-secondary" (click)="downloadCV()"
-          >Download CV</a
-        >
+        <a class="btn btn-secondary" (click)="downloadCV()">Download CV</a>
       </div>
     </div>
   </div>
 </header>
-

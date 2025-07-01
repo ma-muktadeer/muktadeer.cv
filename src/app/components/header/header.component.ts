@@ -1,10 +1,11 @@
+import { NgClass } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterModule, NgClass ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -15,8 +16,15 @@ export class HeaderComponent {
 
   }
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+  toggleMenu(ref?: string) {
+    debugger
+    if(ref){
+      this.isMenuOpen = false;
+    }else{
+      this.isMenuOpen = !this.isMenuOpen;
+    }
+    // const navLinks = document.querySelector('.nav-links');
+    // navLinks?.classList.toggle('active');
   }
 
   downloadCV() {

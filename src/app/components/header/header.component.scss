@@ -55,6 +55,9 @@
           transition: width 0.3s ease;
         }
       }
+      a.active{
+        color: #ffd700;
+      }
     }
 
     .hamburger {
