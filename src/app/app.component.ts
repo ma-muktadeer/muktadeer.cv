@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import 'aos/dist/aos.css';
 import { slideInAnimation } from './model/animation';
 import { LayoutComponent } from './layout/layout.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -16,13 +17,26 @@ export class AppComponent {
   prepareRoute(outlet: RouterOutlet) {
     return outlet?.activatedRouteData?.['animation'] || 'primary';
   }
-  async ngAfterViewInit() {
-    if (typeof window !== 'undefined') {
-      const AOS = await import('aos');
-      AOS.init({
-        duration: 1000,
-        once: false,
-        offset: 80,
+  // async ngAfterViewInit() {
+  //   if (typeof window !== 'undefined') {
+  //     const AOS = await import('aos');
+  //     AOS.init({
+  //       duration: 1000,
+  //       once: false,
+  //       offset: 80,
+  //     });
+  //   }
+  // }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      import('aos').then(AOS => {
+        AOS.init({
+          duration: 1000,
+          once: false,
+          offset: 80,
+        });
       });
     }
   }
