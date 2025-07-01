@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/muktadeer-portfolio/server/main.js",
+      "src": "dist/muktadeer-portfolio/server/server.mjs",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/muktadeer-portfolio/server/main.js"
+      "dest": "dist/muktadeer-portfolio/server/server.mjs"
     }
   ]
 }
