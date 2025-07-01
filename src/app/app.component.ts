@@ -1,6 +1,7 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import 'aos/dist/aos.css';
+import * as AOS from 'aos';
 import { slideInAnimation } from './model/animation';
 import { LayoutComponent } from './layout/layout.component';
 import { isPlatformBrowser } from '@angular/common';
@@ -30,14 +31,12 @@ export class AppComponent {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
-    ngOnInit() {
+  ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      import('aos').then(AOS => {
-        AOS.init({
-          duration: 1000,
-          once: false,
-          offset: 80,
-        });
+      AOS.init({
+        duration: 1000,
+        once: false,
+        offset: 80,
       });
     }
   }
