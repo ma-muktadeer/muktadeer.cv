@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -10,13 +11,37 @@ import { RouterLink } from '@angular/router';
 export class HeaderComponent {
   isMenuOpen = false;
 
+  constructor(private http: HttpClient) {
+
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
   downloadCV() {
-    // Implement CV download functionality
-    console.log('Downloading CV...');
-    // You would typically link to your PDF here
+    // PDF ফাইলের পাথ
+    const filePath = 'assets/file/M_A_Muktadeer_CV.pdf';
+
+    this.http.get(filePath, { responseType: 'blob' }).subscribe({
+      next: (res: any) => {
+        const link = document.createElement('a');
+        const url = window.URL.createObjectURL(res);
+
+        link.href = url;
+        link.download = 'M_A_Muktadeer_CV.pdf';
+        link.target = '_blank';
+
+        document.body.appendChild(link);
+        link.click();
+
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      },
+      error: (err: any) => {
+        console.error('CV ডাউনলোড করতে সমস্যা:', err);
+        alert(err);
+      }
+    });
   }
 }

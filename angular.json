@@ -34,6 +34,11 @@
                 "glob": "**/*",
                 "input": "./src/assets/image/",
                 "output": "/assets/image/"
+              },
+              {
+                "glob": "**/*",
+                "input": "./src/assets/file/",
+                "output": "/assets/file/"
               }
             ],
             "styles": [
