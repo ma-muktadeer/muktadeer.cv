@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/muktadeer-portfolio/server/server.mjs",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "dist/muktadeer-portfolio/browser/**",
+          "dist/muktadeer-portfolio/server/**"
+        ]
+      }
+    }
+  ],
+  "routes": [
+   {
+      "src": "/assets/(.*)",
+      "dest": "dist/muktadeer-portfolio/browser/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "dist/muktadeer-portfolio/server/server.mjs"
+    }
+  ]
+}
