@@ -21,7 +21,7 @@ export class HeaderComponent {
 
   downloadCV() {
     // PDF ফাইলের পাথ
-    const filePath = 'assets/file/M_A_Muktadeer_CV.pdf';
+    const filePath = 'assets/file/muktadeer-cv.pdf';
 
     this.http.get(filePath, { responseType: 'blob' }).subscribe({
       next: (res: any) => {
@@ -29,7 +29,7 @@ export class HeaderComponent {
         const url = window.URL.createObjectURL(res);
 
         link.href = url;
-        link.download = 'M_A_Muktadeer_CV.pdf';
+        link.download = 'muktadeer-cv.pdf';
         link.target = '_blank';
 
         document.body.appendChild(link);
