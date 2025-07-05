@@ -1,9 +1,9 @@
 <section id="contact" class="section contact-section">
   <div class="container">
     <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="info-item">
+    <div class="contact-container" data-aos="fade-up-left"  data-aos-duration="1000">
+      <div class="contact-info" data-aos="flip-left" data-aos-duration="3000">
+        <div class="info-item" data-aos="zoom-in-up">
           <i class="fas fa-envelope"></i>
           <div>
             <h3>Email</h3>
@@ -11,7 +11,7 @@
             <p>{{ "muktadeer.ru@gmail.com" }}</p>
           </div>
         </div>
-        <div class="info-item">
+        <div class="info-item" data-aos="zoom-in-up">
           <i class="fas fa-phone"></i>
           <div>
             <h3>Phone</h3>
@@ -19,7 +19,7 @@
             <p>+8801763070997</p>
           </div>
         </div>
-        <div class="info-item">
+        <div class="info-item" data-aos="zoom-in-up">
           <i class="fas fa-map-marker-alt"></i>
           <div>
             <h3>Location</h3>
@@ -27,7 +27,7 @@
             <p>Mirpur, Pallabi, Dhaka, Bangladesh</p>
           </div>
         </div>
-        <div class="social-links">
+        <div class="social-links" data-aos="zoom-in-up">
           <a href="https://github.com/ma-muktadeer" target="_blank"
             ><i class="fab fa-github"></i
           ></a>
@@ -46,7 +46,7 @@
         (ngSubmit)="onSubmit()"
         class="contact-form"
       >
-        <div class="form-group">
+        <div class="form-group" data-aos="flip-right" data-aos-duration="3000">
           <input
             type="text"
             formControlName="name"
@@ -58,7 +58,7 @@
           <div class="error-message">Name is required</div>
           }
         </div>
-        <div class="form-group">
+        <div class="form-group" data-aos-duration="1500" data-aos="zoom-in">
           <input
             type="email"
             formControlName="email"
@@ -71,7 +71,7 @@
 
           }
         </div>
-        <div class="form-group">
+        <div class="form-group" data-aos-duration="1500" data-aos="zoom-in">
           <input
             type="text"
             formControlName="subject"
@@ -79,7 +79,7 @@
             required
           />
         </div>
-        <div class="form-group">
+        <div class="form-group" data-aos-duration="1500" data-aos="zoom-in">
           <textarea
             formControlName="message"
             rows="5"
@@ -94,7 +94,7 @@
         <button
           type="submit"
           class="btn btn-primary"
-          [disabled]="contactForm.invalid"
+          [disabled]="contactForm.invalid" data-aos-duration="1500" data-aos="zoom-in"
         >
           Send Message
         </button>
