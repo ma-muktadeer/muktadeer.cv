@@ -24,6 +24,7 @@ export class ContactComponent {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
       console.log('Form submitted:', formData);
+
       const body = new URLSearchParams();
       body.set('name', formData.name);
       body.set('email', formData.email);
@@ -31,7 +32,7 @@ export class ContactComponent {
       body.set('subject', formData.subject);
 
       this.http.post(
-        'https://script.google.com/macros/s/AKfycbytsVxVBZPUikkxo54NsESzUIDWNrltz0TpiZZqez2j1bRJQv6tXEI2VX1zJE5AjUXq-A/exec',
+        'https://script.google.com/macros/s/AKfycbxkUXBMU-im5g7RSo26oJ1KpxH24imgtLqwf6SJT567yriztDVNy7ZltEwW9jhoOv3r/exec',
         body.toString(),
         {
           headers: {
