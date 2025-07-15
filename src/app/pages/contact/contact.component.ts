@@ -35,7 +35,8 @@ export class ContactComponent {
         body.toString(),
         {
           headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': '*/*'
           },
           responseType: 'text'
         }

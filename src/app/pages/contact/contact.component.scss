@@ -91,23 +91,21 @@
         font-size: 0.8rem;
         margin-top: 0.3rem;
       }
-      button {
-        width: 100%;
-        padding: 0.8rem;
-        font-size: 1rem;
-        background: var(--primary-color);
+    }
 
-        &:disabled {
-          background: #ccc;
-          cursor: not-allowed;
-        }
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      background: var(--primary-color);
+      color: #ddd;
+      cursor: pointer;
+
+      &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
       }
     }
 
   }
-}
-.btn-primary{
-  background: var(--primary-color) !important;
-  color: #ddd;
-  cursor: pointer;
 }
