@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { AboutComponent } from "../about/about.component";
 import { SkillsComponent } from "../skills/skills.component";
 import { ProjectsComponent } from "../projects/projects.component";
@@ -15,6 +15,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  name = signal<string>('Muktadeer');
 
   constructor(private title: Title, private meta: Meta, private http: HttpClient) {
     this.title.setTitle('M A Muktadeer - Full Stack Developer');
