@@ -12,7 +12,8 @@
     <div class="container">
       <a routerLink="/" class="logo">M.A.Muktadeer</a>
       <ul class="nav-links" [ngClass]="{'active':isMenuOpen}">
-        <li (click)="toggleMenu('link')"><a routerLink="/" routerLinkActive ="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li (click)="toggleMenu('link')"><a routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Home</a></li>
         <li (click)="toggleMenu('link')"><a routerLink="/about" routerLinkActive="active">About</a></li>
         <li (click)="toggleMenu('link')"><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
         <li (click)="toggleMenu('link')"><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
@@ -28,7 +29,7 @@
     </div>
   </nav>
 
-  <div class="hero">
+  <!-- <div class="hero">
     <div class="container">
       <h1>M A Muktadeer</h1>
       <h2>Full Stack Developer</h2>
@@ -40,5 +41,8 @@
         <a class="btn btn-secondary" (click)="downloadCV()">Download CV</a>
       </div>
     </div>
-  </div>
-</header>
+    </div>
+    -->
+
+  </header>
+
