@@ -1,0 +1,48 @@
+<!-- Updated template -->
+<div class="max-w-2xl mx-auto my-5 leading-relaxed">
+  @if(!isExpanded){
+  <div>{{ truncatedText }}</div>
+  }
+  @else if (isExpanded) {
+  <div [@expandCollapse]="isExpanded ? 'expanded' : 'collapsed'" class="overflow-hidden">{{ text }}</div>
+  @let mrDs = moreDes.get(ind);
+  @if(mrDs){
+  <div class="pt-3">
+    @for (item of mrDs; track $index; let i = $index) {
+    <ul class="pl-4">
+      @for (key of objectKeys(item); track $index; let i = $index) {
+      <li>
+        <strong>
+          {{ key }}
+        </strong>:
+        @if(isArray(item[key])){
+        <ul class="pl-4">
+          @for (it of item[key]; track $index) {
+          <li [innerHTML]="it"></li>
+          }
+        </ul>
+        }
+        @else {
+        <span [innerHTML]="item[key]">
+        </span>
+        }
+      </li>
+
+      }
+    </ul>
+
+    }
+  </div>
+
+  }
+  <!-- @else {
+    mrDs not found
+  } -->
+  }
+  @if(isShowExpndBtn){
+  <button (click)="toggleExpand()"
+    class="text-blue-600 hover:text-blue-800 underline cursor-pointer bg-transparent border-none p-0 text-base">
+    {{ isExpanded ? 'Show less' : 'Show more' }}
+  </button>
+  }
+</div>
