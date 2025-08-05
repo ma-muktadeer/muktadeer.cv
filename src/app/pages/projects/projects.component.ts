@@ -7,7 +7,6 @@ interface Project {
   url: string;
   technologies: string[];
   gitUrl?: string;
-  moreDes?: string;
 }
 @Component({
   selector: 'app-projects',
@@ -32,7 +31,6 @@ export class ProjectsComponent {
       url: 'elogin.png',
       technologies: ['Angular 11', 'Java 8', 'Jasper Reports'],
       gitUrl: 'https://github.com/ma-muktadeer/e-signature',
-      moreDes: ``,
     },
     {
       title: 'DPS Portal (Dhaka Bank)',
