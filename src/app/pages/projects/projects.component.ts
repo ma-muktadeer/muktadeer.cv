@@ -42,10 +42,14 @@ export class ProjectsComponent {
       gitUrl: 'https://github.com/ma-muktadeer/train_information'
     },
     {
-      title: 'Vehicle Management (Army)',
-      description: 'Vehicle tracking and management system',
+      title: 'English to Bangla Dictionary – App Description',
+      description: `English to Bangla Dictionary is a lightweight and fast Flutter-based mobile
+      application that helps users translate English words into Bangla instantly. The app is
+      designed to support students, professionals,
+      and anyone looking to improve their English-Bangla vocabulary on the go.`,
       url: 'project4.png',
-      technologies: ['Flutter', 'Spring Boot']
+      gitUrl: 'https://github.com/ma-muktadeer/m_e2b_dic',
+      technologies: ['Flutter', 'SQLight']
     },
     {
       title: 'Vehicle Management (Army)',

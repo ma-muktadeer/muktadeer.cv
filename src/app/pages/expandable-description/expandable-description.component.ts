@@ -110,5 +110,21 @@ export class ExpandableDescriptionComponent implements OnInit, OnChanges {
         'Use Case': `Ideal for passengers and travel planners to check train schedules, plan trips, and view
         seat availability with pricing in one place.` },
     ]],
+    [3, [
+      {
+        'Key Features': [
+          '<b>Instant Word Translation</b>: Quickly find Bangla meanings of English words.',
+          '<b>Synonyms & Antonyms</b>: Explore related and opposite words to enrich your vocabulary.',
+          '<b>Offline Access</b>: Use the dictionary without an active internet connection.',
+          '<b>Pronunciation Support</b>: Hear correct English word pronunciations (if enabled).',
+          '<b>Search History & Favorites</b>: Save frequently searched words for quick access.',
+          '<b>Clean & Modern UI</b>: Smooth, responsive interface built with Flutter for a better user experience.',
+        ]
+      },
+      {
+        'Use Case': `Perfect for learners, travelers, and professionals who need quick and comprehensive English-to-Bangla translations,
+        including synonyms and antonyms, all in one app.`
+      },
+    ]],
   ]);
 }
