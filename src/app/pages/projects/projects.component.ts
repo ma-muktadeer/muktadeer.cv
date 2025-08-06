@@ -33,10 +33,13 @@ export class ProjectsComponent {
       gitUrl: 'https://github.com/ma-muktadeer/e-signature',
     },
     {
-      title: 'DPS Portal (Dhaka Bank)',
-      description: 'Deposit Pension Scheme management portal',
-      url: 'project3.png',
-      technologies: ['Angular', 'Java']
+      title: 'Train Matrix – Application Description',
+      description: `Train Matrix is a modern Angular 19 web application designed to provide comprehensive
+      train information between selected stations. Users can easily search and view a complete list of trains
+      operating from a departure station to a destination station, along with detailed insights about each train.`,
+      url: 'trlogin.png',
+      technologies: ['Angular 19'],
+      gitUrl: 'https://github.com/ma-muktadeer/train_information'
     },
     {
       title: 'Vehicle Management (Army)',

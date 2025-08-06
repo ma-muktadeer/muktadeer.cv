@@ -29,7 +29,7 @@ export class ExpandableDescriptionComponent implements OnInit, OnChanges {
 
   @Input({ required: true }) ind: number;
   @Input() text: string = '';
-  @Input() maxLength: number = 50;
+  @Input() maxLength: number = 65;
   isExpanded: boolean = false;
   truncatedText: string = '';
   showToggle: boolean = false;
@@ -94,6 +94,21 @@ export class ExpandableDescriptionComponent implements OnInit, OnChanges {
         ]
       },
       { Outcome: 'Improved operational efficiency, reduced turnaround time for approvals, and ensured compliance with digital security standards.' },
+    ]],
+    [2, [
+      { Frontend: `Built with Angular 11, offering a responsive UI for signing, verifying, and managing documents.` },
+      {
+        'Key Features': [
+          '<b>Train Listings</b>: View all trains running between selected "From" and "To" stations.',
+          '<b>Detailed Train Information</b>: Access schedules, off days, total available seats, and seat pricing for each train.',
+          '<b>Real-Time Updates</b>: Get up-to-date data on train availability and timing.',
+          '<b>User-Friendly Interface</b>: Built with Angular 19 for a fast, responsive, and smooth browsing experience.',
+          '<b>Search and Filter</b>: Quickly locate trains using station names, train numbers, or timings.',
+        ]
+      },
+      {
+        'Use Case': `Ideal for passengers and travel planners to check train schedules, plan trips, and view
+        seat availability with pricing in one place.` },
     ]],
   ]);
 }
