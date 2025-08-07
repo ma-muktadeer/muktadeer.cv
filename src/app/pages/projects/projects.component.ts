@@ -47,7 +47,7 @@ export class ProjectsComponent {
       application that helps users translate English words into Bangla instantly. The app is
       designed to support students, professionals,
       and anyone looking to improve their English-Bangla vocabulary on the go.`,
-      url: 'project4.png',
+      url: 'e2b-1.jpg',
       gitUrl: 'https://github.com/ma-muktadeer/m_e2b_dic',
       technologies: ['Flutter', 'SQLight']
     },
