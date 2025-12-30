@@ -9,21 +9,20 @@
     </svg>
   </div>
 
-  <div class="container mx-auto px-6 py-16 pt-28 relative z-10">
+  <div class="px-6 py-16 pt-28 relative z-10" style="margin: 5rem 5rem 0">
     <div class="grid md:grid-cols-3 gap-12 mb-12">
-      <!-- About Section -->
-      <div class="space-y-6" data-aos="fade-left" data-aos-duration="500">
+      <div class="space-y-6 flex flex-col justify-center" data-aos="fade-left" data-aos-duration="500">
         <div class="space-y-4">
-          <h3 class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h3
+            class="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 relative inline-block bg-clip-text text-pink-400">
             M A Muktadeer
+            <span class="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 -mb-2"></span>
           </h3>
           <p class="text-gray-300 leading-relaxed">
             Full Stack Developer specializing in Angular and Spring Boot
             applications for enterprise solutions.
           </p>
         </div>
-
-        <!-- Social Links -->
         <div class="flex gap-4">
           <a href="https://github.com/muktade" target="_blank"
             class="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transform hover:scale-110 hover:-translate-y-1 transition-all duration-300 border border-gray-700 hover:border-transparent">
@@ -40,8 +39,7 @@
         </div>
       </div>
 
-      <!-- Quick Links -->
-      <div class="space-y-6" data-aos="fade-left" data-aos-duration="1000">
+      <div class="space-y-6 flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000">
         <h3 class="text-xl font-bold relative inline-block">
           Quick Links
           <span class="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 -mb-2"></span>
@@ -84,16 +82,17 @@
           Contact Info
           <span class="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 -mb-2"></span>
         </h3>
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3 text-gray-300">
-            <i class="fas fa-map-marker-alt text-purple-400 mt-1"></i>
+        <ul class="space-y-4" style="margin-top: 6px;">
+          <li class="flex items-center gap-3 text-gray-300">
+            <i class="fas fa-map-marker-alt text-purple-400"></i>
             <span class="leading-relaxed">Dhaka, Bangladesh</span>
           </li>
-          <li class="flex items-start gap-3 text-gray-300">
+
+          <li class="flex items-center gap-3 text-gray-300">
             <i class="fas fa-phone text-green-400 mt-1"></i>
             <a href="tel:+8801521473368" class="hover:text-green-400 transition-colors">+8801521473368</a>
           </li>
-          <li class="flex items-start gap-3 text-gray-300 break-all">
+          <li class="flex items-center gap-3 text-gray-300 break-all">
             <i class="fas fa-envelope text-pink-400 mt-1"></i>
             <a href="mailto:bandhon1995&#64;gmail.com"
               class="hover:text-pink-400 transition-colors">bandhon1995&#64;gmail.com</a>
@@ -102,17 +101,15 @@
       </div>
     </div>
 
-    <!-- Footer Bottom -->
     <div class="border-t border-gray-700/50 pt-8 text-center" data-aos="zoom-in">
-      <p class="text-gray-400 text-sm">
+      <div class="text-gray-500 text-sm">
         &copy; {{ currentYear }} M A Muktadeer. All rights reserved.
         <span class="inline-block mx-2">•</span>
         Built with <span class="text-pink-500">❤</span> using Angular & Tailwind CSS
-      </p>
+      </div>
     </div>
   </div>
 
-  <!-- Decorative Elements -->
   <div class="absolute bottom-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl"></div>
   <div class="absolute top-1/2 left-0 w-64 h-64 bg-pink-500/10 rounded-full filter blur-3xl"></div>
 </footer>
