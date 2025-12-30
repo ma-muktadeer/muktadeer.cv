@@ -3,10 +3,10 @@
     <h2 class="section-title mb-16">Technical Skills</h2>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
-      @for (skill of skills; track $index) {
+      @for (skill of skills; let i = $index; track i) {
       <div
         class="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-        data-aos="flip-right" data-aos-delay="{{$index * 50}}">
+        data-aos="flip-right" data-aos-delay="100">
         <div class="flex flex-col items-center space-y-3">
           <div class="transform group-hover:scale-110 transition-transform duration-300">
             <i class="{{skill.icon}} {{skill.class}} text-5xl"></i>
